@@ -1,6 +1,5 @@
 <!--Left Side Bar-->
-<md-sidenav md-component-id="uno-sidebar" class="md-sidenav-left"
-			md-theme="sideBarTheme" flex>
+<md-sidenav md-component-id="uno-sidebar" class="md-sidenav-left" md-theme="sideBarTheme" flex>
 	<!-- Sidebar Header -->
 	<md-toolbar layout="row" layout-padding>
 		<div class="md-toolbar-tools">
@@ -46,16 +45,22 @@
 <md-content id="main-container" layout="column" md-scroll-y flex>
 	<div flex layout="column">
 		<div flex layout="row">
-			<subscription-card
-					ng-repeat="subscription in vm.subscriptions"
-					title="subscription.title"
-					logo="subscription.logo"
-					description="subscription.description"
-					on-subscribe="vm.subscribe($event, subscription.title)">
+			<subscription-card ng-repeat="subscription in vm.subscriptions" title="subscription.title"
+				logo="subscription.logo" description="subscription.description"
+				on-subscribe="vm.subscribe($event, subscription.title)">
 			</subscription-card>
 		</div>
 		<div flex="nogrow">
-			[Este es un bottom div]
+			<div>
+				<p test-directive>Bold</p>
+			</div>
 		</div>
+		</br>
+		<uppercase-directive>uppercase!</uppercase-directive>
+		</br>
+		<info-directive> </info-directive>
+		<br>
+		
+
 	</div>
 </md-content>

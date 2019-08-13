@@ -12,8 +12,11 @@ import './app.scss';
 import Components from './components/components.module';
 
 import configuration from './configs/app.config';
+
+import sandraDirectives from './directives/directives.module'
 import routing from './configs/app.routing';
 import { AppComponent } from './app.component';
+
 
 angular
     .module('app.module', [
@@ -22,6 +25,7 @@ angular
         'ngAnimate',
         'ngMessages',
         'ui.router',
+        sandraDirectives,
         Components
     ])
     .config(configuration)
