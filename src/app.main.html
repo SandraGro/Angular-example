@@ -43,24 +43,28 @@
 
 <!-- Content -->
 <md-content id="main-container" layout="column" md-scroll-y flex>
-	<div flex layout="column">
-		<div flex layout="row">
+	<div flex="grow" layout="column">
+		<div flex="grow" layout="row">
 			<subscription-card ng-repeat="subscription in vm.subscriptions" title="subscription.title"
 				logo="subscription.logo" description="subscription.description"
 				on-subscribe="vm.subscribe($event, subscription.title)">
 			</subscription-card>
 		</div>
-		<div flex="nogrow">
-			<div>
+		<div flex="grow" layout="row">
+			<div flex>
 				<p test-directive>Bold</p>
+				</br>
+				<uppercase-directive>uppercase!</uppercase-directive>
+				</br>
+				<info-directive> </info-directive>
 			</div>
 		</div>
-		</br>
-		<uppercase-directive>uppercase!</uppercase-directive>
-		</br>
-		<info-directive> </info-directive>
-		<br>
-		
+		<div flex="grow" layout="row">
+			<div flex>
+				<user-info-directive></user-info-directive>
+			</div>
+		</div>
+
 
 	</div>
 </md-content>

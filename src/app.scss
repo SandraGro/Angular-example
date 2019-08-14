@@ -39,3 +39,50 @@
   align-items: center;
   justify-content: center;
 }
+.card{
+  margin:40px;
+}
+
+.picture{
+  height:150px;
+}
+
+.labels{
+  display: inline;
+}
+
+.txt{
+  display: inline;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.imgContainer {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color:#434a69;
+  float: left;
+  width: 15%;
+  padding: 30px;
+  height: 200px;
+
+}
+
+.textContainer {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color:#cccccc;
+  float: left;
+  width: 35%;
+  padding: 10px 20px;
+  height: 200px;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+

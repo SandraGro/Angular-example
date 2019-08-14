@@ -1,10 +1,12 @@
-import templateCard from './sandraCard.tpl.html'
+import templateCard from './sandraCard.tpl.html';
+import controller from './sandraCard.controller';
 export default function cardDirective() {
     return {
-        restrict: "C",
+        restrict: "E",
         template: templateCard,
-        controller: 'cardController',
-        controllerAs:'vm'
+        controller,
+        controllerAs: 'vm',
+        bindToController: true
 
     };
 };
