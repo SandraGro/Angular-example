@@ -1,8 +1,8 @@
 class sandraCardCtrl {
-    constructor() {
-        this.firstName = 'Sandra';
-        this.lastName = 'Guerrero';
-        this.position = 'Trainee';
+    constructor($scope) {
+        $scope.firstName = 'Sandra';
+        $scope.lastName = 'Guerrero';
+        $scope.position = 'Trainee';
 
     }
 

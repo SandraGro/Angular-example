@@ -8,5 +8,5 @@ export default angular.module('custom.directives', [])
     .directive('testDirective', testDirective)
     .directive('uppercaseDirective', uppercaseDirective)
     .directive('infoDirective', infoDirective)
-    .directive('userInfoDirective', cardDirective)
+    .directive('cardDirective', cardDirective)
     .name;
