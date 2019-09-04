@@ -6,14 +6,59 @@
         <div class="textContainer">
             <h1>User</h1>
             <h4 class="labels"><b>First Name: </b></h4>
-            <p class="txt">{{firstName}}</p>
+            <input class="txt" ng-model="vm.firstName">
             </br>
             <h4 class="labels"><b>Last Name: </b></h4>
-            <p class="txt">{{lastName}}</p>
+            <p class="txt">{{vm.lastName}}</p>
             </br>
             <h4 class="labels"><b>Job position:</b></h4>
-            <p class="txt">{{position}}</p>
+            <p class="txt">{{vm.position}}</p>
         </div>
     </div>
 </div>
+</br>
+<section class="panel panel-default col-md-7">
+    <div class="panel-heading">SuccessFactors OCN</div>
+    <form name="successFactorIntegrationForm" ng-submit="saveSuccessFactorIntegration()">
+        <section class="panel-body">
 
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Tenant Base URL:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="successFactorIntegration.baseUrl"
+                            ng-disabled="disableKeys">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Client ID:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="successFactorIntegration.clientId"
+                            ng-disabled="disableKeys">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Client Secret:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" ng-model="successFactorIntegration.clientSecret"
+                            ng-disabled="disableKeys">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Username Field:</label>
+                    <div class="col-sm-10">
+                        <select type="text" class="form-control" ng-model="vm.userNameOption"
+                            ng-options="x for x in vm.userNameOptions"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label >{{vm.userNameOption}}</label>
+                    <input type="text" class="form-control" ng-model="vm.userNameOption">
+                </div>
+            </div>
+        </section>
+    </form>
+</section>
+</br>

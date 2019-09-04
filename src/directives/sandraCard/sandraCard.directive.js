@@ -4,7 +4,10 @@ export default function cardDirective() {
     return {
         restrict: "E",
         template: templateCard,
-        controller
+        controller,
+        controllerAs: 'vm',
+        scope:{         
+        }
     };
 };
 
